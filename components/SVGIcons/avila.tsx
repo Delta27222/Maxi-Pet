@@ -1,10 +1,7 @@
 import React from 'react';
 import { SVGIconProps } from './svg.types';
 
-export const AvilaIcon = ({
-  size = '28px',
-  className = 'cursor-pointer',
-}: SVGIconProps) => (
+export const AvilaIcon = ({ className = 'cursor-pointer' }: SVGIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="28"

@@ -16,4 +16,3 @@ export function PopularProducts() {
     </section>
   );
 }
-
