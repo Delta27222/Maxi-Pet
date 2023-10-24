@@ -10,13 +10,13 @@ export const BannerComponent = () => (
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="absolute z-40 bottom-4 left-2/4 flex -translate-x-2/4 gap-2">
           {new Array(length).fill('').map((_, i) => (
-            <span
-              key={i}
-              className={`w-8 block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                activeIndex === i ? 'bg-primary-300' : 'bg-secondary-100'
-              }`}
-              onClick={() => setActiveIndex(i)}
-            />
+            <button type="button" key={i} onClick={() => setActiveIndex(i)}>
+              <span
+                className={`w-8 block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                  activeIndex === i ? 'bg-primary-300' : 'bg-secondary-100'
+                }`}
+              />
+            </button>
           ))}
         </div>
       )}
