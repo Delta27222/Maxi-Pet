@@ -1,17 +1,19 @@
 import React from 'react';
-import { footerOptions } from '../../constants';
-import { FacebookIcon, InstagramIcon, TwitterIcon } from '../SVGIcons';
+import { footerOptions } from '../constants';
+import { FacebookIcon, InstagramIcon, TwitterIcon } from './SVGIcons';
 
-export const FooterOptionsComponent = () => (
-  <section className="min-h-80 py-10  px-10 sm:px-14 lg:px-24 flex flex-col lg:flex-row justify-between items-start bg-system-200 gap-10">
-    <AboutUs />
-    <div className="flex flex-row justify-start flex-wrap gap-5">
-      {footerOptions.map((option, index) => (
-        <MyAccount key={index} {...option} />
-      ))}
-    </div>
-  </section>
-);
+export function FooterOptions() {
+  return (
+    <section className="min-h-80 py-10  px-10 sm:px-14 lg:px-24 flex flex-col lg:flex-row justify-between items-start bg-system-200 gap-10">
+      <AboutUs />
+      <div className="flex flex-row justify-start flex-wrap gap-5">
+        {footerOptions.map((option, index) => (
+          <MyAccount key={index} {...option} />
+        ))}
+      </div>
+    </section>
+  );
+}
 
 const AboutUs = () => (
   <div className="flex flex-col justify-start items-start gap-5 w-[330px]">
@@ -24,7 +26,7 @@ const AboutUs = () => (
     </span>
   </div>
 );
-// ver tamano de las letras sssss
+
 const MyAccount = ({ title, info }) => (
   <div className="flex flex-col justify-start items-start gap-5 w-[200px]">
     <h3 className="text-base lg:text-lg font-semibold text-primary-300">

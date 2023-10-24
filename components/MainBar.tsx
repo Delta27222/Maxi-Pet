@@ -1,21 +1,23 @@
 import React from 'react';
 import Image from 'next/image';
-import maxiPetLogo from '../../public/maxiPetLogo.png';
+import maxiPetLogo from '../public/maxiPetLogo.png';
 import {
   LocationIcon,
   PetHouseIcon,
   SearchIcon,
   ShoppingCartFullIcon,
   UserIcon,
-} from '../SVGIcons';
+} from './SVGIcons';
 
-export const MainBarcomponent = () => (
-  <section className="h-14 px-9 flex flex-row justify-between items-center bg-system-100">
-    <Image src={maxiPetLogo} alt="logo-MaxiPet" />
-    <SearchBar />
-    <Options />
-  </section>
-);
+export function MainBar() {
+  return (
+    <section className="h-14 px-9 flex flex-row justify-between items-center bg-system-100">
+      <Image src={maxiPetLogo} alt="logo-MaxiPet" />
+      <SearchBar />
+      <Options />
+    </section>
+  );
+}
 
 const Options = () => (
   <div className="flex flex-row justify-center items-center space-x-3">
